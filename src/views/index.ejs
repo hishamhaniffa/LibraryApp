@@ -33,11 +33,13 @@
             </div>
             <nav class="collapse navbar-collapse" role="navigation">
                 <ul class="nav navbar-nav">
-                    <% for(var i=0; i< list.length; i++) { %>
+                    <% for(var i=0; i< nav.length; i++) { %>
                         <li>
-                            <a href="#"><%=list[i] %></a>
+                            <a href="<%= nav[i].Link %>">
+                                <%=nav[i].Text %>
+                            </a>
                         </li>
-                    <% } %>
+                        <% } %>
                 </ul>
                 <ul class="nav navbar-right navbar-nav">
                     <li class="dropdown">
