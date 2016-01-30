@@ -2,6 +2,7 @@
 
 <h3>Usage</h3>
 <hr />
-1) Clone repo
-2) <code>npm install</code>
-3) <code>gulp serve</code>
+1) Clone repo <br />
+2) cd into project folder <br />
+3) <code>npm install</code> <br />
+4) <code>gulp serve</code> <br />
