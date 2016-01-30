@@ -14,16 +14,18 @@ app.set('views', './src/views');
 var nav = [{
     Link: '/Books',
     Text: 'Books'
-        }, {
+}, {
     Link: '/Authors',
     Text: 'Authors'
-        }]
+}];
 
 var bookRouter = require('./src/routes/bookRoutes')(nav);
+var adminRouter = require('./src/routes/adminRoutes')(nav);
 
 app.set('view engine', 'ejs'); // for jade and ejs only change the view engine
 
 app.use('/Books', bookRouter);
+app.use('/Admin', adminRouter);
 
 app.get('/', function (req, res) {
     res.render('index', {
