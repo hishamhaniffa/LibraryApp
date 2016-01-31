@@ -2,8 +2,14 @@ var express = require('express');
 var bookRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
-var router = function (nav) {
 
+var router = function (nav) {
+    bookRouter.use(function (req, res, next) { // if u want to apply middleware to the entire route
+        if (!req.user) {
+            res.redirect('/');
+        }
+        next();
+    });
     bookRouter.route('/')
         .get(function (req, res) {
             var url = 'mongodb://localhost/libraryApp';
