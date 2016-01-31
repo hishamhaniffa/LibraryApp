@@ -3,23 +3,26 @@ var adminRouter = express.Router();
 var mongodb = require('mongodb').MongoClient;
 
 var books = [
-{
-        title: 'War and Peace',
+    {
+        title: 'Doing Data Science',
         genre: 'Historical Fiction',
         author: 'Lev Niklos',
+        bookId: 17346997,
         read: false
     },
-{
+    {
         title: 'Oliver Twist',
         genre: 'Historical Fiction',
-        author: 'Charles Willim',
+        author: 'Charles Dickens',
+        bookId: 18254,
         read: true
     },
-{
+    {
         title: 'Great Expectation',
         genre: 'Historical Fiction',
-        author: 'Charles Hendri',
-        read: true
+        author: 'Charles Dickens',
+        bookId: 2623,
+        read: false
     }
 ];
 
